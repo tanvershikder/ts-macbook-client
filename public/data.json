@@ -1,0 +1,92 @@
+[
+    {
+        "name":"mackbook pro 13 2020",
+        "img":"https://www.notebookcheck.net/fileadmin/Notebooks/Apple/MacBook_Pro_13_Late_2020_M1_Entry_256_GB/IMG_9459.JPG",
+        "decreption":"this is mackbook pro 13 from apple company",
+        "price":"$900",
+        "quantity":1,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"raki"
+    },
+    {
+        "name":"mackbook Air A1 chip",
+        "img":"https://static-01.daraz.com.bd/p/b48212e9d3124e1f86aa6d717f578b6b.jpg",
+        "decreption":"this is mackbook Air A1 chip from apple company",
+        "price":"$1000",
+        "quantity":3,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"paki"
+    },
+    {
+        "name":"mackbook 13 pro sheduler",
+        "img":"https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/photo_1517336714731_489689fd1ca8_9.jpeg",
+        "decreption":"this is mackbook 13 pro sheduler from apple company",
+        "price":"$800",
+        "quantity":3,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"saki"
+    },
+    {
+        "name":"mackbook Air 2022",
+        "img":"https://cdn.mos.cms.futurecdn.net/EXVWoCqF6RUykSaord54VS.jpg",
+        "decreption":"this is mackbook pro 13 from apple company",
+        "price":"$900",
+        "quantity":2,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"kaki"
+    },
+    {
+        "name":"mackbook pro review 2020",
+        "img":"https://cdn.pocket-lint.com/r/s/1200x630/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-pbzm4ejvvs.jpg",
+        "decreption":"this is mackbook pro 13 from apple company",
+        "price":"$600",
+        "quantity":4,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"rasii"
+    },
+    {
+        "name":"13-inch mackbook pro",
+        "img":"https://i0.wp.com/sixcolors.com/wp-content/uploads/2020/05/13pro-keyboard.jpg?ssl=1",
+        "decreption":"this is 13-inch mackbook pro from apple company",
+        "price":"$900",
+        "quantity":5,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"raki"
+    },
+    {
+        "name":"mackbook pro 14 2022",
+        "img":"https://www.xda-developers.com/files/2021/10/MacBook-Pro-M1-Max-2021-XDA-ssdffeffke2432.jpg",
+        "decreption":"this is mackbook pro 14 from apple company",
+        "price":"$1100",
+        "quantity":5,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"paki"
+    },
+    {
+        "name":"mackbook pro 13 2020",
+        "img":"https://www.notebookcheck.net/fileadmin/Notebooks/Apple/MacBook_Pro_13_Late_2020_M1_Entry_256_GB/IMG_9459.JPG",
+        "decreption":"this is mackbook pro 13 from apple company",
+        "price":"$900",
+        "quantity":7,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"haki"
+    },
+    {
+        "name":"mackbook pro 15 2022",
+        "img":"https://imageio.forbes.com/specials-images/imageserve/5fd00ea644cd62376ce2b6c1/In-this-photo-illustration-a-13inch-Macbook-pro-seen---/960x0.jpg?fit=bounds&format=jpg&width=960",
+        "decreption":"this is mackbook pro 15 from apple company",
+        "price":"$900",
+        "quantity":5,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"raki"
+    },
+    {
+        "name":"mackbook pro 13 2020",
+        "img":"https://www.notebookcheck.net/fileadmin/Notebooks/Apple/MacBook_Pro_13_Late_2020_M1_Entry_256_GB/IMG_9459.JPG",
+        "decreption":"this is mackbook pro 13 from apple company",
+        "price":"$900",
+        "quantity":6,
+        "suplieremail":"tan@gmail.com",
+        "supliername":"raki"
+    }
+]

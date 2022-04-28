@@ -1,0 +1,35 @@
+[debug] [2022-04-28T17:56:29.172Z] ----------------------------------------------------------------------
+[debug] [2022-04-28T17:56:29.175Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tanve\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-04-28T17:56:29.176Z] CLI Version:   10.6.0
+[debug] [2022-04-28T17:56:29.176Z] Platform:      win32
+[debug] [2022-04-28T17:56:29.176Z] Node Version:  v16.13.1
+[debug] [2022-04-28T17:56:29.290Z] Time:          Thu Apr 28 2022 23:56:29 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-28T17:56:29.293Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-28T17:56:29.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-28T17:56:29.501Z] > authorizing via signed-in user (tanvershikder96@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  F:\Node.js\Assignmet 11\client site\ts-mackbook
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-28T17:57:06.803Z] > refreshing access token with scopes: []
+[debug] [2022-04-28T17:57:06.805Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-28T17:57:07.819Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 28 Apr 2022 17:57:07 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-28T17:57:08.074Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-28T17:57:09.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-04-28T17:57:09.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
