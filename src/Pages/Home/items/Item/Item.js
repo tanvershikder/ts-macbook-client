@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({ mackbook }) => {
     const navigate = useNavigate()
-    console.log(mackbook);
+    // console.log(mackbook);
 
     const hendelInventory = (id) =>{
         navigate(`/inventory/${id}`)
