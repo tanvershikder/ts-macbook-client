@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Elon Mask",
+        "img":"https://cloudfront-us-east-2.images.arcpublishing.com/reuters/D64OUNCBGBMJDE7PYTDAYDDKB4.jpg",
+        "comment":"this super web site for get your favorite mackbook",
+        "star":"5"
+    },
+    {
+        "name":"The Rock",
+        "img":"https://m0.her.ie/wp-content/uploads/2018/01/07093633/GettyImages-887815620.jpg",
+        "comment":"i think this wesite is enough to get your fevorite mackbook",
+        "star":"4.9"
+    },
+    {
+        "name":"Bezos",
+        "img":"https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/05/25/975670-961858-r3.jpg",
+        "comment":"this super web site betrter then of my web site",
+        "star":"4.7"
+    },
+    {
+        "name":"Mark Zukarberg",
+        "img":"https://content.fortune.com/wp-content/uploads/2018/07/gettyimages-961697338.jpg",
+        "comment":"think my facebook is best for get your fevorite mackbook ",
+        "star":"4"
+    }
+]

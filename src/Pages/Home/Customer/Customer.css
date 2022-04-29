@@ -1,0 +1,24 @@
+.cardimgreview{
+    height: 130px;
+    width: 154px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.reviewCard{
+    background-color: rgb(250, 247, 232);
+    height: 300px;
+}
+.star{
+    color: rgb(240, 150, 65);
+}
+.reviewcontainer{
+    background-color: rgb(240, 246, 255);
+    padding: 20px;
+}
+.cutomername{
+    color: #9407ffe0;
+}
+.customercomment{
+    color: #3300ff73;
+}

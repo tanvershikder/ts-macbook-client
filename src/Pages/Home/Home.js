@@ -1,4 +1,5 @@
 import React from 'react';
+import Customer from './Customer/Customer';
 import './Home.css';
 import Items from './items/Items';
 
@@ -12,6 +13,7 @@ const Home = () => {
                 </div>
             </div>
             <Items></Items>
+            <Customer></Customer>
         </div>
     );
 };
