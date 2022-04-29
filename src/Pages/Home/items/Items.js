@@ -15,7 +15,7 @@ const Items = () => {
     return (
         <div className='row'>
             {
-                newMackBook.map(mackbook => <Item key={mackbook._id} mackbook={mackbook}></Item>)
+                newMackBook.map(mackbook => <Item key={mackbook?._id} mackbook={mackbook}></Item>)
             }
         </div>
     );

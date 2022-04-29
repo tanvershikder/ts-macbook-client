@@ -59,7 +59,7 @@ const AddMackBook = () => {
                         <input type="text" name="img" id="" required placeholder='image url' />
                     </div>
 
-                    <input className='from-submit bg-primary' type="submit" value="Login" />
+                    <input className='from-submit bg-primary' type="submit" value="Add your Product" />
                 </div>
             </form>
         </div>

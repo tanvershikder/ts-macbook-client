@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Login/Loading/Loading';
 
 const Inventory = () => {
     const { user } = useAuthState(auth)
     const { id } = useParams();
-    // console.log(id);
-
     const [macbook, setMackbook] = useState();
 
     useEffect(() => {
@@ -16,49 +15,82 @@ const Inventory = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setMackbook(data))
-    }, [id])
+    }, [macbook])
 
-    // console.log(macbook);
     if (!user) {
         <Loading></Loading>
     }
-    let quantity = Number(macbook?.quantity);
-    // console.log(macbook?.quantity);
+    let updatequantity = Number(macbook?.quantity);
+
 
     const manageDelivary = () => {
+        // const name = macbook;
+        if (updatequantity > 0) {
+            updatequantity = updatequantity - 1;
 
-        if (quantity > 0) {
-            // quantity = String(quantity - 1);
-            quantity =quantity - 1;
+            const quantity = { updatequantity }
 
-            // console.log(quantity);
+            console.log(quantity);
 
             const url = `http://localhost:4000/products/${id}`
-            fetch(url,{
-                method:"PUT",
+            console.log(url);
+            fetch(url, {
+                method: "PUT",
                 headers: {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify(quantity)
-               
+
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log("success",data)
-                    console.log("update quntity");
+                    console.log("success", data)
+                    // toast("update quntity");
                 })
 
         }
-        else {
-            return console.log("finished");
+        if (updatequantity <= 0) {
+            const updatequantity = "stock Out"
+            const quantity = { updatequantity }
+            const url = `http://localhost:4000/products/${id}`
+            console.log(url);
+            fetch(url, {
+                method: "PUT",
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(quantity)
+
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("success", data)
+                    // toast("update quntity");
+                })
         }
-        // setQuantity(getquantity)
-        
     }
 
 
-    const addProduct = () => {
+    const addProduct = (event) => {
+        event.preventDefault()
+        const updatequantity = event.target.quantity.value;
+        const quantity = { updatequantity };
 
+        const url = `http://localhost:4000/products/${id}`
+        console.log(url);
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(quantity)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("success", data)
+                // toast("update quntity");
+            })
     }
 
 
@@ -75,10 +107,18 @@ const Inventory = () => {
                     </div>
                     <div>
                         <button onClick={manageDelivary}>delivered</button>
-                        <button onClick={addProduct}>add products</button>
+
+                    </div>
+                    <div>
                     </div>
                 </div>
             </div>
+            <form onSubmit={addProduct}>
+                <input type="number" name='quantity' />
+                <button>Store Product</button>
+            </form>
+            <Link to='/addproduct' className='btn btn-success'>Add new product</Link>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
