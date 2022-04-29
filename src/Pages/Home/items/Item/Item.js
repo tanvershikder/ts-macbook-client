@@ -1,6 +1,12 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({ mackbook }) => {
+    const navigate = useNavigate()
+
+    const hendelInventory = (id) =>{
+        navigate(`/inventory/${id}`)
+    }
     return (
         <div className='col-md-4'>
             <div className="card" style={{width:"18rem"}}>
@@ -13,7 +19,7 @@ const Item = ({ mackbook }) => {
                             <p>Qunatity : {mackbook.quantity}</p>
                         </div>
                         <p className='text-center'>supliername : {mackbook.supliername}</p>
-                        <a href="#" className="btn btn-primary">Update Products</a>
+                        <button onClick={()=>hendelInventory(mackbook._id)} className="btn btn-primary">Update Products</button>
                     </div>
             </div>
         </div>

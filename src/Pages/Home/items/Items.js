@@ -5,7 +5,9 @@ const Items = () => {
     const [mackbooks,setMackbooks] = useState([]);
 
     useEffect(()=>{
-        fetch('data.json')
+        const url = "http://localhost:4000/products";
+
+        fetch(url)
         .then(res=>res.json())
         .then(data => setMackbooks(data))
     },[])
@@ -13,7 +15,7 @@ const Items = () => {
     return (
         <div className='row'>
             {
-                newMackBook.map(mackbook => <Item mackbook={mackbook}></Item>)
+                newMackBook.map(mackbook => <Item key={mackbook._id} mackbook={mackbook}></Item>)
             }
         </div>
     );
