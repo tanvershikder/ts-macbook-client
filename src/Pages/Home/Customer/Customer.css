@@ -1,9 +1,10 @@
 .cardimgreview{
     height: 130px;
-    width: 154px;
+    width: 50%;
     border-radius: 50%;
     margin-left: 20px;
     margin-top: 10px;
+    text-align: center;
 }
 .reviewCard{
     background-color: rgb(250, 247, 232);
@@ -22,3 +23,29 @@
 .customercomment{
     color: #3300ff73;
 }
+
+    .card:hover {
+    color: rgb(17, 13, 13);
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+.card .backgroundEffect {
+    bottom: 0;
+    height: 0px;
+    width: 100%
+}
+.card:hover .backgroundEffect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: #1b9ce3;
+    animation: popBackground 0.3s ease-in
+}
+.card:hover .content .btn {
+    background: #fff;
+    color: #1b9ce3;
+    box-shadow: #0000001a 0px 3px 5px
+}
+

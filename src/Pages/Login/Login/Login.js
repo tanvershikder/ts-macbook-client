@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword,  } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../Loading/Loading';
 import Socailmedia from '../socailmedia/Socailmedia';
 import "./Login.css"
 
@@ -10,8 +12,16 @@ const Login = () => {
     const [showpass,setShowpass] = useState(false);
     const navigate = useNavigate()
     const location = useLocation()
+    const EmailRef = useRef('');
+    const PasswordRef = useRef('');
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+      );
 
     const from = location.state?.from?.pathname || "/";
+
+
+    
 
 let errorElement;
     const [
@@ -28,7 +38,28 @@ let errorElement;
         const password = event.target.password.value;
         
         signInWithEmailAndPassword(email,password)
+        
     }
+
+    const hendelForgetPssword = async() =>{
+        const email = EmailRef.current.value;
+        if(email){
+            await sendPasswordResetEmail(email);
+            alert("email sent");
+            console.log("email send");
+        }
+        else{
+            toast('enter your email')
+            console.log("emailnot send");
+        }
+
+    }
+    
+    
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
     if (user) {
         navigate(from, { replace: true });
     }
@@ -42,7 +73,7 @@ let errorElement;
                 <div>
                     <h3 className='from-title text-primary text-center'>Please Login</h3>
                     <div className="input-group">
-                        <input type="email"  name="email" id="" required placeholder='Enter your Email' />
+                        <input type="email"  name="email" ref={EmailRef} id="" required placeholder='Enter your Email' />
                     </div>
                     <div className="input-group">
                         <input   name="password" type={showpass ? "text" : "password"} id="" required placeholder='Enter Password' />
@@ -64,15 +95,15 @@ let errorElement;
                         <Link className='form-link' to='/signup'>Create new account !  </Link>
                     </div>
                     <div>
-                        <button className='form-link btn btn-link' >Forget Password !</button>
-                        {/* onClick={hendelForgetPssword} */}
+                        <button className='form-link btn btn-link' onClick={hendelForgetPssword}>Forget Password !</button>
+                        
                     </div>
                 </div>
 
                 
 
                  <Socailmedia></Socailmedia>
-                {/* <ToastContainer /> */}
+                <ToastContainer></ToastContainer>
 
             </form>
         </div>

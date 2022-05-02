@@ -1,0 +1,23 @@
+.invrntoryCard{
+    background-color: antiquewhite;
+    margin: mx-0 auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+.button{
+    background-color: rgb(142, 211, 64);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+.dellivaryButton{
+    background-color: rgb(196, 218, 72);
+    border-radius: 5px;
+    border: 0;
+    width: 120px;
+    height: 40px;
+}
+
+.dellivaryButton:hover{
+    background-color: rgba(196, 218, 72, 0.63);
+}

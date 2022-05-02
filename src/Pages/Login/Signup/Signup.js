@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Socailmedia from '../socailmedia/Socailmedia';
@@ -10,13 +10,16 @@ const Signup = () => {
     const [showpass,setShowpass] = useState(false);
     const [error,setError] = useState();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         passerror,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{ sendEmailVerification: true });
 
     const hendelSignup = event =>{
         event.preventDefault()
@@ -35,7 +38,7 @@ const Signup = () => {
 
     }
     if(user){
-        navigate('/')
+        navigate(from, { replace: true })
     }
 
     return (
@@ -67,7 +70,7 @@ const Signup = () => {
                     </p>
                     
                     <p className='text-center text-danger'>{error}</p>
-                    <input className='from-submit bg-primary' type="submit" value="Login" />
+                    <input className='from-submit bg-primary' type="submit" value="SignUP" />
                 </div>
                 <div className='d-flex justify-content-around align-items-center'>
                     <div>

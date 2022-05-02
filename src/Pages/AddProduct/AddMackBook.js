@@ -1,9 +1,11 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const AddMackBook = () => {
     const [user] = useAuthState(auth);
+    const navigae = useNavigate()
     // console.log(user.email);
 
     const addProduct = event => {
@@ -31,8 +33,10 @@ const AddMackBook = () => {
             .then(res => res.json())
             .then((data) => console.log(data));
 
-
+            alert("your mackbook add successfully")
+            navigae('/')
         console.log(product);
+        
 
     }
     return (

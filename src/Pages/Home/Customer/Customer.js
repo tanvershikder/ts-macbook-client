@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Card } from 'react-bootstrap';
 import './Customer.css'
 
 const Customer = () => {
@@ -12,20 +13,24 @@ const Customer = () => {
 
 
     return (
-        <div className='container reviewcontainer mt-5'>
-            <h3 className='text-center m-2'>This is Review section</h3>
+        <div className='container reviewcontainer mt-md-5'>
+            <h3 className='text-center my-md-2'>This is Review section</h3>
 
             <div className='row container text-center align-center'>
                 {
-                    reviews.map(review => <div className='col-md-3 '>
-                        <div class="card  reviewCard" style={{width: "12rem"}}>
-                            <img src={review.img} class="card-img-top cardimgreview" alt="..."/>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center cutomername">{review.name}</h5>
-                                    <p class="card-text customercomment">{review.comment}</p>
-                                    <p className='star'>star {review.star}</p>
-                                </div>
-                        </div>
+                    reviews.map(review => <div className='col-md-4 reviewcontainer'>
+                        <Card className='align-items-center m-md-3 m-sm-1' style={{ width: '280px', height: "300px", marginRight: "5px" }}>
+                            <div className='backgroundEffect'>
+                                <Card.Img className='cardimgreview' variant="top" src={review.img} />
+                                <Card.Body>
+                                    <Card.Title>{review.name}</Card.Title>
+                                    <Card.Text>
+                                        {review.comment}
+                                    </Card.Text>
+                                    <p className='star'>{review.star}</p>
+                                </Card.Body>
+                            </div>
+                        </Card>
                     </div>)
                 }
             </div>

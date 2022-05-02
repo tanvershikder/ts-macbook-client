@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ManageList from './ManageList/ManageList';
+import './Manage.css'
 
 const Manage = () => {
     const [mackbooks, setMackbooks] = useState([]);
@@ -37,7 +38,7 @@ const Manage = () => {
     return (
         <div className='mt-5 container '>
 
-            <table class="table table-dark table-striped">
+            <table class="table table-dark table-striped tableStyle">
                 <thead>
                     <tr>
                         <th scope="col">Quantity</th>

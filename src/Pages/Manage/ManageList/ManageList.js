@@ -8,7 +8,7 @@ const ManageList = ({ mackbook,hendeldelete}) => {
 
     return (
 
-        <tr>
+        <tr className=''>
             <th scope="row">{mackbook.quantity}</th>
             <td>{mackbook.name}</td>
             <td>{mackbook.email}</td>
