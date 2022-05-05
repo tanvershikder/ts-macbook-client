@@ -39,6 +39,7 @@ const Signup = () => {
     }
     if(user){
         navigate(from, { replace: true })
+        console.log(user);
     }
 
     return (

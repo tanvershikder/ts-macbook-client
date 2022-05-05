@@ -18,7 +18,7 @@ const Customer = () => {
 
             <div className='row container text-center align-center'>
                 {
-                    reviews.map(review => <div className='col-md-4 reviewcontainer'>
+                    reviews.map(review => <div className='col-md-4 reviewcontainer' key={review.id}>
                         <Card className='align-items-center m-md-3 m-sm-1' style={{ width: '280px', height: "300px", marginRight: "5px" }}>
                             <div className='backgroundEffect'>
                                 <Card.Img className='cardimgreview' variant="top" src={review.img} />

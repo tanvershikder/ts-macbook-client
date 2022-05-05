@@ -17,6 +17,7 @@ const Socailmedia = () => {
     
     if(googleUser){
         navigate(from,{replace:true})
+       
     }
     return (
         <div>

@@ -61,20 +61,21 @@ let errorElement;
     }
 
     if (user) {
-        // navigate(from, { replace: true });
-        console.log(user._tokenResponse.email);
+        navigate(from, { replace: true });
+        console.log(user.user.email);
+
         const url = `http://localhost:4000/login`
 
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                email: user._tokenResponse.email || user._tokenResponse.email
+                email:user.user.email
             }),
             headers: {
-                'Content-type': 'application/json',
+                'Content-type': 'application/json; charset=UTF-8',
             },
         })
-        .then((response) => response.json())
+            .then(res => res.json())
             .then((data) => {
                 localStorage.setItem("accessToken",data.token) // send token to localsotorage
 
