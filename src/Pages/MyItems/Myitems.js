@@ -21,7 +21,7 @@ const Myitems = () => {
             <div className='row'>
                 {
                     products?.map(product => <div className='col-md-4'>
-                        <div class="card text-center align-items-center" style={{width: "18rem"}}>
+                        <div class="card text-center align-items-center mb-3" style={{width: "18rem"}}>
                             <img src={product?.img} class="card-img-top" style={{height: "200px"}} alt="..."/>
                                 <div class="card-body">
                                     <h5 class="card-title text-primary">{product?.name}</h5>
