@@ -61,11 +61,33 @@ let errorElement;
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
+        console.log(user._tokenResponse.email);
+        const url = `http://localhost:4000/login`
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                email: user._tokenResponse.email || user._tokenResponse.email
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+        .then((response) => response.json())
+            .then((data) => {
+                localStorage.setItem("accessToken",data.token) // send token to localsotorage
+
+                navigate('/')
+            });
+
+
     }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
+
+
 
     return (
         <div className='from-container'>
