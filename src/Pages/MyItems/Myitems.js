@@ -8,13 +8,12 @@ const Myitems = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:4000/product?email=${user.email}`
+        const url = `https://hidden-fortress-66686.herokuapp.com/product?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user])
 
-    console.log(products);
 
     return (
         <div className='container '>

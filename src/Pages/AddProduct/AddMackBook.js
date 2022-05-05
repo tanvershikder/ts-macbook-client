@@ -22,19 +22,26 @@ const AddMackBook = () => {
             email,name, price, quantity, decreption, img
         }
 
+        const url = "https://hidden-fortress-66686.herokuapp.com/products";
+        // const url = 'http://localhost:4000/products'
 
-        fetch('http://localhost:4000/products', {
+        fetch(url, {
             method: 'POST',
-            body: JSON.stringify(product),
             headers: {
-                'Content-type': 'application/json; charset=UTF-8',
+                'authorization':`${user.email} ${localStorage.getItem('accessToken')}`,
+                'Content-type': 'application/json; charset=UTF-8'
             },
+            body: JSON.stringify(product)
         })
             .then(res => res.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+                console.log(data);
+                alert(data.success)
+                // navigae('/')
+            });
 
-            alert("your mackbook add successfully")
-            navigae('/')
+            
+            
         console.log(product);
         
 
