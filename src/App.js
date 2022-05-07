@@ -12,6 +12,7 @@ import Manage from './Pages/Manage/Manage';
 import Inventory from './Pages/Inventory/Inventory';
 import AddMackBook from './Pages/AddProduct/AddMackBook';
 import Notfound from './Pages/Shared/Notfound/Notfound';
+import Blog from './Pages/Shared/Blog/Blog';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
 
         <Route path='/myitems' element={
           <RequireAuth>
