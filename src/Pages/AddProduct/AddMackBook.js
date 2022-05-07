@@ -22,8 +22,8 @@ const AddMackBook = () => {
             email,name, price, quantity, decreption, img
         }
 
-        // const url = "https://hidden-fortress-66686.herokuapp.com/products";
-        const url = 'http://localhost:4000/products'
+        const url = "https://hidden-fortress-66686.herokuapp.com/products";
+        // const url = 'http://localhost:4000/products'
 
         fetch(url, {
             method: 'POST',

@@ -64,7 +64,7 @@ let errorElement;
         navigate(from, { replace: true });
         console.log(user.user.email);
 
-        const url = `http://localhost:4000/login`
+        const url = `https://hidden-fortress-66686.herokuapp.com/login`
 
         fetch(url, {
             method: 'POST',
@@ -77,6 +77,7 @@ let errorElement;
         })
             .then(res => res.json())
             .then((data) => {
+                console.log(data.token);
                 localStorage.setItem("accessToken",data.token) // send token to localsotorage
 
                 navigate('/')
