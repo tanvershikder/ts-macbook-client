@@ -15,7 +15,7 @@ const Item = ({ mackbook }) => {
             <div className="card h-100 shadow cardbg" style={{ width: "19rem" }}>
                 <img src={mackbook?.img} className="card-img-top cardimg" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title text-center">{mackbook?.name}</h5>
+                    <h5 className="card-title text-center mcname">{mackbook?.name}</h5>
                     <p className="card-text text-center">{mackbook?.decreption}</p>
                     <div className='d-flex justify-content-between'>
                         <p>price :{mackbook?.price}</p>
@@ -23,7 +23,7 @@ const Item = ({ mackbook }) => {
                     </div>
                     <p className='text-center'>supliername : {mackbook?.supliername}</p>
                     <div className="text-center">
-                        <button onClick={() => hendelInventory(mackbook?._id)} className="btn btn-warning text-center">Update Products</button>
+                        <button onClick={() => hendelInventory(mackbook?._id)} className="btn btn-warning text-center mcUpdate">Update Products</button>
                     </div>
                 </div>
             </div>

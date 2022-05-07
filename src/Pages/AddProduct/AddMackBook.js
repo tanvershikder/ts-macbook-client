@@ -15,13 +15,14 @@ const AddMackBook = () => {
 
         const email = event?.target?.email?.value;
         const name = event?.target?.productname?.value;
+        const supliername = event?.target?.suplier?.value;
         const price = event?.target?.price?.value;
         const quantity = event?.target?.quantity?.value;
         const decreption = event?.target?.decreption?.value;
         const img = event?.target?.img?.value;
 
         const product = {
-            email,name, price, quantity, decreption, img
+            email,name, price, quantity, decreption, img,supliername
         }
 
         const url = "https://hidden-fortress-66686.herokuapp.com/products";
@@ -55,6 +56,9 @@ const AddMackBook = () => {
                     <h3 className='from-title text-primary text-center'>ADD YOUR PRODUCT</h3>
                     <div className="input-group">
                         <input type="email" name="email" id="" required placeholder='' value={user.email} />
+                    </div>
+                    <div className="input-group">
+                        <input type="text" name="suplier" id="" required placeholder='Enter the suplier name'  />
                     </div>
                     <div className="input-group">
                         <input type="text" name="productname" id="" required placeholder='Enter Name or model' />
