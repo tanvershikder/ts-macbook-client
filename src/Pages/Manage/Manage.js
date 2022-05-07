@@ -37,14 +37,14 @@ const Manage = () => {
     }
 
     return (
-        <div className='mt-5 container '>
+        <div className='container '>
 
-            <table class="table table-dark table-striped tableStyle">
+            <table class="table table-dark table-striped tableStyle managemain">
                 <thead>
                     <tr>
                         <th scope="col">Quantity</th>
                         <th scope="col">Model</th>
-                        <th scope="col">Suplier</th>
+                        <th scope="col">Suplier Email</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>

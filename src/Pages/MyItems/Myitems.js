@@ -1,24 +1,56 @@
+import { async } from '@firebase/util';
+import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Myitems = () => {
     const [user] = useAuthState(auth);
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const url = `https://hidden-fortress-66686.herokuapp.com/product?email=${user.email}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data))
+        // const url = `https://hidden-fortress-66686.herokuapp.com/product?email=${user.email}`
+        
+        const getMyItems = async() =>{
+            const email = user?.email;
+            console.log(email);
+            const url = `https://hidden-fortress-66686.herokuapp.com/product?email=${email}`
+            // const url = `http://localhost:4000/product?email=${email}`
+
+
+            try{
+                const {data} = await axios.get(url,{
+                    headers : {
+                        authorization : `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setProducts(data);
+            }
+            catch (error) {
+                toast(error.message);
+                if(error.response.status === 401 || error.response.status === 403){
+                    signOut(auth)
+                    navigate('/login')
+                }
+            }
+
+        }
+        getMyItems()
+
     }, [user])
 
 
     return (
-        <div className='container '>
+        <div className='container'>
             <h4 className='text-center m-3 text-success'>This is my items</h4>
-            <div className='row'>
+            <div className='row container'>
                 {
                     products?.map(product => <div className='col-md-4'>
                         <div class="card text-center align-items-center mb-3" style={{width: "18rem"}}>
@@ -39,6 +71,7 @@ const Myitems = () => {
                     </div>)
                 }
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

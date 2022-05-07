@@ -1,6 +1,8 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 
 const AddMackBook = () => {
@@ -36,8 +38,8 @@ const AddMackBook = () => {
             .then(res => res.json())
             .then((data) => {
                 console.log(data);
-                alert(data.success)
-                // navigae('/')
+                toast(data.success)
+                event.target.reset()
             });
 
             
@@ -47,7 +49,7 @@ const AddMackBook = () => {
 
     }
     return (
-        <div className='from-container'>
+        <div className='from-container managemain'>
             <form onSubmit={addProduct}>
                 <div>
                     <h3 className='from-title text-primary text-center'>ADD YOUR PRODUCT</h3>
@@ -70,9 +72,10 @@ const AddMackBook = () => {
                         <input type="text" name="img" id="" required placeholder='image url' />
                     </div>
 
-                    <input className='from-submit bg-primary' type="submit" value="Add your Product" />
+                    <input className='from-submit bg-warning' type="submit" value="Add your Product" />
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
