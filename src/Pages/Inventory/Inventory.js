@@ -12,7 +12,7 @@ const Inventory = () => {
     const [macbook, setMackbook] = useState();
 
     useEffect(() => {
-        const url = `http://localhost:4000/products/${id}`
+        const url = `https://hidden-fortress-66686.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMackbook(data))
@@ -33,7 +33,7 @@ const Inventory = () => {
 
             console.log(quantity);
 
-            const url = `http://localhost:4000/products/${id}`
+            const url = `https://hidden-fortress-66686.herokuapp.com/products/${id}`
             console.log(url);
             fetch(url, {
                 method: "PUT",
@@ -53,7 +53,7 @@ const Inventory = () => {
         if (updatequantity <= 0) {
             const updatequantity = "stock Out"
             const quantity = { updatequantity }
-            const url = `http://localhost:4000/products/${id}`
+            const url = `https://hidden-fortress-66686.herokuapp.com/products/${id}`
             console.log(url);
             fetch(url, {
                 method: "PUT",
@@ -78,7 +78,7 @@ const Inventory = () => {
         updatequantity = nowQuantity + updatequantity;
         const quantity = { updatequantity };
 
-        const url = `http://localhost:4000/products/${id}`
+        const url = `https://hidden-fortress-66686.herokuapp.com/products/${id}`
         console.log(url);
         fetch(url, {
             method: "PUT",

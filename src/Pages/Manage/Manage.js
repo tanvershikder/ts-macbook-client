@@ -19,7 +19,7 @@ const Manage = () => {
         const procide = window.confirm("are you sure ? you want to delete ?")
         if (procide) {
             console.log(id);
-            const url = `http://localhost:4000/products/${id}`
+            const url = `https://hidden-fortress-66686.herokuapp.com/products/${id}`
             fetch(url, {
                 method: "DELETE"
             })
