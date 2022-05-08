@@ -4,6 +4,10 @@ Live site link [Live site](https://github.com/facebook/create-react-app).
 
 ## server site code link
 
+lIVE SERVER SITE [server site code](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-tanvershikder).
+
+## Client site Code link
+LIENT SITE CODE lINK [client site](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-tanvershikder)
 
 
 ## Short Descreption
