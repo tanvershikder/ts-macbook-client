@@ -60,7 +60,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        
         console.log(user.user.email);
 
         const url = `https://hidden-fortress-66686.herokuapp.com/login`
@@ -79,7 +79,7 @@ const Login = () => {
                 console.log(data.token);
                 localStorage.setItem("accessToken", data.token) // send token to localsotorage
 
-                navigate('/')
+                navigate(from, { replace: true });
             });
 
 

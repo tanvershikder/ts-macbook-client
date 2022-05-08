@@ -21,3 +21,6 @@
 .dellivaryButton:hover{
     background-color: rgba(196, 218, 72, 0.63);
 }
+.inventory{
+    margin-top: 80px;
+}

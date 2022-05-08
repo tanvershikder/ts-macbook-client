@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import Loading from '../Login/Loading/Loading';
 import './Inventory.css'
@@ -45,8 +46,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log("success", data)
-                    // toast("update quntity");
+                    toast("update quantity");
                 })
 
         }
@@ -65,8 +65,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log("success", data)
-                    // toast("update quntity");
+                    toast("update quntity");
                 })
         }
     }
@@ -91,21 +90,22 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log("success", data)
-                // toast("update quntity");
+                toast("update quntity");
             })
     }
 
 
 
     return (
-        <div className=''>
-            <div className=''>
+        <div className='inventory'>
+            <div className='mt-5'>
                 <div className=' my-3'>
                     <div className="card container text-center invrntoryCard " style={{ width: "20rem" }} >
                         <img src={macbook?.img} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <p className="card-text">price: {macbook?.price}</p>
-                            <p>quantity : {macbook?.quantity}</p>
+                            <p className="card-text mcprice">price: {macbook?.price}</p>
+                            <p className='quantity'>quantity : {macbook?.quantity}</p>
+                            <p className='mcsuplier'>Suplier : {macbook?.supliername}</p>
                             <p>Supliear email: {macbook?.email}</p>
                         </div>
                         <div>
@@ -114,7 +114,7 @@ const Inventory = () => {
                         </div>
                         <div>
                             <form onSubmit={addProduct} className='m-5'>
-                            <h5>Update Quantity</h5>
+                            <h5 className='mctitle'>Update Quantity</h5>
                                 <input type="number" name='quantity' className='mb-3'/>
                                 <button className='button'>Store Product</button>
                                 <Link to='/addproduct' className='btn btn-warning mt-2'>Add new product</Link>

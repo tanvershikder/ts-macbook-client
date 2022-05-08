@@ -6,7 +6,6 @@ const Manage = () => {
     const [mackbooks, setMackbooks] = useState([]);
 
     useEffect(() => {
-        // const url = "http://localhost:4000/products";
         const url = "https://hidden-fortress-66686.herokuapp.com/products";
 
         fetch(url)
