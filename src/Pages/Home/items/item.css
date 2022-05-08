@@ -10,7 +10,29 @@
 }
 .mcname{
     color: rgb(248, 157, 37);
+    font-family:'Times New Roman';
 }
-/* .mcUpdate{
-    font-family: ;
-} */
+.mcUpdate{
+    font-family:'Times New Roman';
+}
+.mctext{
+    color: blueviolet;
+    font-weight: 500;
+    font-family:'Times New Roman';
+}
+.mctitle{
+    font-family:'Times New Roman' ;
+    font-weight: 700;
+    color: rgb(255 129 0 / 80%);
+}
+.mcprice{
+    color: #ff0c00c4;
+    font-weight: 400;
+}
+.quantity{ 
+    color: #7f89ff;
+    font-weight: 500;
+}
+.mcsuplier{
+    color: #c1187d;
+}

@@ -15,7 +15,7 @@ const Manage = () => {
     }, [])
 
     const hendeldelete = id => {
-        
+
         const procide = window.confirm("are you sure ? you want to delete ?")
         if (procide) {
             console.log(id);
@@ -37,24 +37,26 @@ const Manage = () => {
     }
 
     return (
-        <div className='container ps-3'>
+        <div style={{height:"100%"}}>
+            <div className='container ps-3 h-100'>
 
-            <table class="table table-dark table-striped tableStyle managemain">
-                <thead>
-                    <tr>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Model</th>
-                        <th scope="col">Suplier</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        mackbooks.map(mackbook => <ManageList key={mackbook._id} mackbook={mackbook} hendeldelete={hendeldelete}></ManageList>)
-                    }
-                </tbody>
-            </table>
+                <table class="table table-dark table-striped tableStyle managemain">
+                    <thead>
+                        <tr>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Suplier</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            mackbooks.map(mackbook => <ManageList key={mackbook._id} mackbook={mackbook} hendeldelete={hendeldelete}></ManageList>)
+                        }
+                    </tbody>
+                </table>
 
+            </div>
         </div>
     );
 };

@@ -17,7 +17,7 @@ const Items = () => {
     const newMackBook = mackbooks.slice(0, 6)
     return (
         <div className='mt-5 p-3'>
-            <h3 className='text-center mb-3 text-warning'>Collection of Mackbook</h3>
+            <h3 className='text-center mb-3  mctitle'>Collection of Mackbook</h3>
             <div className='row clloection '>
                 {
                     newMackBook.map(mackbook => <Item key={mackbook?._id} mackbook={mackbook}></Item>)

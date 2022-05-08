@@ -14,7 +14,7 @@ const Customer = () => {
 
     return (
         <div className='container reviewcontainer mt-md-5'>
-            <h3 className='text-center my-md-2'>This is Review section</h3>
+            <h3 className='text-center my-md-2 cusheder'>This is Review section</h3>
 
             <div className='row container text-center align-center'>
                 {

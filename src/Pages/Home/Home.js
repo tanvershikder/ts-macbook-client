@@ -12,19 +12,19 @@ import mark2 from '../../images/mack2.jpg'
 const Home = () => {
     return (
         <div>
-            <div >
+            <div className='mt-5'>
                 <Carousel className='w-100'>
                     <Carousel.Item interval={1000}>
                         <img
                             className="d-block w-100"
-                            src={mark3}
+                            src="https://s.yimg.com/os/creatr-uploaded-images/2021-10/fc27e1e0-350a-11ec-8d7e-26deaf2f6d2b"
                             alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item interval={500}>
                         <img
                             className="d-block w-100"
-                            src={mark2}
+                            src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-pro-13-og-202011?wid=600&hei=315&fmt=jpeg&qlt=95&.v=1604347427000"
                             alt="Second slide"
                         />
                         
@@ -32,7 +32,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src={mark1}
+                            src='https://cdn.mos.cms.futurecdn.net/uWjEogFLUTBc8mSvagdiuP.jpg'
                             alt="Third slide"
                         />
                         
